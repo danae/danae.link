@@ -1,0 +1,24 @@
+// Import the initial variables and fonts
+@import url('https://fonts.googleapis.com/css?family=Barlow:400,700|Pompiere');
+@import "../bulma/sass/utilities/initial-variables.sass";
+
+// Custom fonts
+$family-primary: 'Barlow', sans-serif;
+$family-secondary: 'Pompiere', cursive;
+
+// Custom colors
+$primary: rgb(170, 0, 80);
+$light: rgb(252, 252, 255);
+$dark: rgb(10, 10, 10);
+
+// Custom derived colors
+$link: $grey;
+$link-active: $primary;
+$link-hover: $primary;
+
+// Set other variables
+$body-overflow-y: auto;
+$column-gap: 2rem;
+$custom-colors: ("button": ($grey-dark, $white-ter));
+$dimensions: 16 24 32 48 64 96 128 192 256;
+$section-padding: 1.5rem 1.5rem;
