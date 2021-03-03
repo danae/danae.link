@@ -7304,7 +7304,7 @@ label.panel-block:hover {
   flex-basis: 0;
   flex-grow: 1;
   flex-shrink: 1;
-  padding: 2rem;
+  padding: 0.75rem;
 }
 
 .columns.is-mobile > .column.is-narrow {
@@ -8499,17 +8499,17 @@ label.panel-block:hover {
 }
 
 .columns {
-  margin-left: -2rem;
-  margin-right: -2rem;
-  margin-top: -2rem;
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
+  margin-top: -0.75rem;
 }
 
 .columns:last-child {
-  margin-bottom: -2rem;
+  margin-bottom: -0.75rem;
 }
 
 .columns:not(:last-child) {
-  margin-bottom: calc(1.5rem - 2rem);
+  margin-bottom: calc(1.5rem - 0.75rem);
 }
 
 .columns.is-centered {
@@ -9896,7 +9896,7 @@ a.has-text-button-dark:hover, a.has-text-button-dark:focus {
   margin-left: 0.5rem !important;
 }
 
-.mx-2 {
+.mx-2, .content .is-small-gap > .column {
   margin-left: 0.5rem !important;
   margin-right: 0.5rem !important;
 }

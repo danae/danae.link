@@ -89,6 +89,11 @@
     margin-left: auto !important;
     margin-right: auto !important;
   }
+
+  // Small gap columns
+  .is-small-gap > .column {
+    @extend .mx-2;
+  }
 }
 
 // Hero styling
