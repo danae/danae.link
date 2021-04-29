@@ -78,6 +78,11 @@
     }
   }
 
+  // Card image styling
+  .card-image > .image {
+    @extend .mb-0;
+  }
+
   // Alignment with margins
   .is-aligned-left {
     margin-right: auto !important;

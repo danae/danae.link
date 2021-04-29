@@ -9828,7 +9828,7 @@ a.has-text-button-dark:hover, a.has-text-button-dark:focus {
   margin-right: 0 !important;
 }
 
-.mb-0 {
+.mb-0, .content .card-image > .image {
   margin-bottom: 0 !important;
 }
 
