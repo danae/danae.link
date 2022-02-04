@@ -65,9 +65,7 @@
 
   // Image figure styling
   .image {
-    @extend .mx-0;
-    @extend .mt-0;
-    @extend .mb-3;
+    @extend .m-0;
 
     // Gallery images
     &.is-gallery > img {
@@ -76,6 +74,14 @@
       @extend .px-0;
       @extend .py-0;
     }
+  }
+
+  // Media styling
+  .media + .media {
+    @extend .mt-0;
+    @extend .pt-5;
+
+    border-top: none;
   }
 
   // Card image styling
