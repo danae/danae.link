@@ -2,16 +2,70 @@
 @import 'variables';
 @import 'bulma';
 
-// Footer styling
-.footer {
-  @extend .is-size-7;
-  @extend .py-5;
 
-  background: none;
+// Header styling
+header {
+  // Hero styling
+  &.hero {
+    background-image: url('../images/cover.png');
+    background-size: cover;
+    background-position: center;
+
+    // Hero content
+    .hero-body {
+      @extend .p-0;
+
+      h1 {
+        @extend .has-text-light;
+      }
+    }
+  }
+
+  // Media styling
+  .media {
+    @extend .is-align-items-center;
+
+    .media-left {
+      @extend .mr-6;
+    }
+
+    @include mobile  {
+      flex-direction: column;
+
+      .media-left {
+        margin-right: 0 !important;
+        margin-bottom: 1.5rem;
+      }
+
+      .media-content {
+        text-align: center;
+      }
+    }
+  }
+}
+
+// Main styling
+main {
+  .column {
+    @extend .py-5;
+  }
+}
+
+// Footer styling
+footer {
+  @extend .is-size-7;
+  @extend .has-background-light;
+  @extend .has-text-centered;
+  @extend .py-5;
 }
 
 // Content styling
 .content {
+  // Element spacing
+  & > *:not(:last-child) {
+    @extend .mb-4;
+  }
+
   // Heading styling
   @for $i from 1 through 6
   {
@@ -20,7 +74,12 @@
       @extend .has-text-weight-normal;
 
       @if $i <= 2 {
+        @extend .is-uppercase;
         @extend .has-text-primary;
+      }
+
+      &:not(:first-child) {
+        @extend .mt-6;
       }
     }
   }
@@ -30,58 +89,35 @@
     color: $link;
     border-bottom: 1px $link dotted;
 
+    transition: 0.1s ease-in-out;
+
     &:active {
       color: $link-active;
+      background: rgba($link-active, 0.15);
       border-bottom-color: $link-active;
     }
 
     &:hover {
       color: $link-hover;
+      background: rgba($link-hover, 0.15);
       border-bottom-color: $link-hover;
     }
 
-    // Links in the footer have no border
-    .footer > & {
+    // Links in the header and footer and with overlay have no border
+    header &, footer &, &.is-overlay {
       border-bottom: none;
     }
-  }
 
-  // Button styling
-  .button {
-    @extend .is-rounded;
-    @extend .is-button;
-    @extend .is-outlined;
-
-    &:hover, &:active {
-      .icon {
-        @extend .has-text-light;
-      }
-    }
-
-    &.is-fullwidth {
-      justify-content: flex-start;
+    // Links with overlay have no background
+    &.is-overlay:hover, &.is-overlay:active {
+      color: $link;
+      background: none;
     }
   }
 
   // Image figure styling
   .image {
     @extend .m-0;
-
-    // Gallery images
-    &.is-gallery > img {
-      @extend .box;
-      @extend .is-shadowless;
-      @extend .px-0;
-      @extend .py-0;
-    }
-  }
-
-  // Media styling
-  .media + .media {
-    @extend .mt-0;
-    @extend .pt-5;
-
-    border-top: none;
   }
 
   // Card image styling
@@ -89,59 +125,28 @@
     @extend .mb-0;
   }
 
-  // Alignment with margins
-  .is-aligned-left {
-    margin-right: auto !important;
-  }
-  .is-aligned-right {
-    margin-left: auto !important;
-  }
-  .is-aligned-center {
-    margin-left: auto !important;
-    margin-right: auto !important;
-  }
+  // Media styling
+  .media + .media {
+    @extend .mt-0;
+    @extend .pt-4;
 
-  // Small gap columns
-  .is-small-gap > .column {
-    @extend .mx-2;
+    border-top: none;
   }
 }
 
-// Hero styling
-.hero {
-  // Hero cover background
-  &.has-background-cover {
-    background-image: url("../images/cover.png");
-    background-size: cover;
-    background-position: top;
-    background-repeat: no-repeat;
-  }
+// Box styling
+.is-box {
+  @extend .box;
+  @extend .is-shadowless;
+  @extend .mb-0;
+  @extend .p-2;
 
-  // Hero content
-  &.content {
-    // Heading styling
-    @for $i from 1 through 6
-    {
-      h#{$i} {
-        @extend .has-text-light;
-      }
-    }
-  }
-}
+  border: 1px $border solid;
 
-// Embed styling
-.is-embed-toggle {
-  & .embed-icon {
+  &.media {
     @extend .is-flex;
-    @extend .is-align-items-center;
-    @extend .is-align-content-center;
-    @extend .is-justify-content-center;
 
-    visibility: hidden;
-  }
-
-  &:hover .embed-icon {
-    visibility: visible;
+    border-color: $border;
   }
 }
 

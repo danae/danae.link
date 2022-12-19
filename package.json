@@ -1,0 +1,17 @@
+{
+  "name": "danae.link",
+  "version": "0.1.0",
+  "author": "Danae Dekker <info@danaedekker.com>",
+  "description": "My personal link tree",
+  "license": "GPL-3.0-or-later",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danae/danae.link.git"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.2.1",
+    "bulma": "^0.9.4",
+    "jquery": "^3.6.2",
+    "twemoji": "^14.0.2"
+  }
+}
