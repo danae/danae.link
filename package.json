@@ -1,7 +1,7 @@
 {
   "name": "danae.link",
   "version": "0.1.0",
-  "author": "Danae Dekker <info@danaedekker.com>",
+  "author": "Danae Dekker <hello@danaedekker.com>",
   "description": "My personal link tree",
   "license": "GPL-3.0-or-later",
   "repository": {
@@ -9,10 +9,30 @@
     "url": "git+https://github.com/danae/danae.link.git"
   },
   "homepage": "https://danae.link/",
+  "scripts": {
+    "build": "gulp build",
+    "postinstall": "gulp build",
+    "update": "git pull && npm install"
+  },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^6.5.2",
-    "bulma": "^0.9.4",
-    "jquery": "^3.6.2",
-    "twemoji": "^14.0.2"
+    
+    "@fortawesome/fontawesome-free": "^6.6.0",
+    "brfs": "~2.0.2",
+    "browserify": "~17.0.1",
+    "bulma": "~1.0.2",
+    "gulp": "~4.0.2",
+    "gulp-rename": "~2.0.0",
+    "gulp-sass": "~5.1.0",
+    "gulp-sourcemaps": "~3.0.0",
+    "gulp-uglify": "~3.0.2",
+    "jquery": "~3.7.1",
+    "navigo": "~8.11.1",
+    "sass": "~1.80.6",
+    "twemoji": "^14.0.2",
+    "vinyl-buffer": "~1.0.1",
+    "vinyl-source-stream": "~2.0.0"
+  },
+  "devDependencies": {
+    "gulp-webserver": "^0.9.1"
   }
 }

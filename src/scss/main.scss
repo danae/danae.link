@@ -1,0 +1,129 @@
+// Import the Bulma framework
+@use 'bulma';
+@use 'bulma/sass/utilities/mixins';
+
+
+// Header styling
+header {
+  // Hero styling
+  &.hero {
+    background-image: url('/assets/images/cover.png');
+    background-size: cover;
+    background-position: center;
+
+    // Hero content
+    .hero-body {
+      padding: 0;
+
+      h1 {
+        color: var(--bulma-light);
+      }
+    }
+  }
+
+  // Header media styling
+  .media {
+    align-items: center;
+
+    .media-left {
+      margin-right: 3rem;
+    }
+
+    // Mobile header media styling
+    @include mixins.mobile  {
+      flex-direction: column;
+
+      .media-left {
+        margin-right: 0 !important;
+        margin-bottom: 1.5rem;
+      }
+
+      .media-content {
+        text-align: center;
+      }
+    }
+  }
+}
+
+// Footer styling
+footer {
+  font-size: var(--bulma-size-7);
+  text-align: center;
+}
+
+// Content styling
+.content {
+  // Element spacing
+  & > *:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  // Heading styling
+  @for $i from 1 through 6
+  {
+    h#{$i} {
+      font-family: var(--bulma-family-secondary);
+      font-weight: normal;
+
+      @if $i <= 2 {
+        text-transform: uppercase;
+        color: var(--bulma-primary);
+      }
+
+      &:not(:first-child) {
+        margin-top: 3rem;
+      }
+    }
+  }
+
+  // Link styling
+  a:not(.button) {
+    color: var(--bulma-link);
+    border-bottom: 1px var(--bulma-link) dotted;
+    transition: 0.1s ease-in-out;
+
+    // Hover and active link styling
+    &:hover, &:active {
+      color: var(--bulma-primary);
+      border-bottom-color: var(--bulma-primary);
+      background-color: rgba(var(--bulma-primary), 15%);
+    }
+
+    // Links in the header and footer and with overlay have no border
+    header &, footer &, &.is-overlay {
+      border-bottom: none;
+    }
+
+    // Links with overlay have no background
+    &.is-overlay:hover, &.is-overlay:active {
+      color: var(--bulma-link);
+      background: none;
+    }
+  }
+
+  // Image styling
+  .image {
+    margin: 0;
+  }
+
+  // Media styling
+  .media {
+    margin-bottom: 0;
+  }
+
+  // Media followed by media styling
+  .media + .media {
+    margin-top: 0;
+    padding-top: 1rem;
+
+    border-top: none;
+  }
+}
+
+// Emoji styling
+.emoji {
+  height: 1em;
+  width: 1em;
+  margin: 0 .05em 0 .1em;
+  vertical-align: -0.1em;
+}
