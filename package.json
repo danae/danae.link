@@ -10,9 +10,7 @@
   },
   "homepage": "https://danae.link/",
   "scripts": {
-    "build": "gulp build",
-    "postinstall": "gulp build",
-    "update": "git pull && npm install"
+    "build": "gulp build"
   },
   "dependencies": {
     
