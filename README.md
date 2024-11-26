@@ -8,10 +8,18 @@ An image from this Dockerfile will be built and published to the GitHub Containe
 
 ## Installation
 
-You can pull the current version of the image with the following Bash line.
+You can pull the current version of the image with the following command:
 
 ```bash
 $ docker pull ghcr.io/danae/danae.link:master
 ```
 
 Other versions of the package can be found [here](https://github.com/danae/danae.link/pkgs/container/danae.link).
+
+## Local development
+
+Install Node.js and npm, then run the following command to open a development web server with live reload at port 8000:
+
+```bash
+gulp dev
+```
