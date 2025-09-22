@@ -10,7 +10,8 @@
   },
   "homepage": "https://danae.link/",
   "scripts": {
-    "build": "gulp build"
+    "build": "gulp build",
+    "dev": "gulp dev"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.6.0",

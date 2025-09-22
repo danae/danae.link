@@ -21,5 +21,5 @@ Other versions of the package can be found [here](https://github.com/danae/danae
 Install Node.js and npm, then run the following command to open a development web server with live reload at port 8000:
 
 ```bash
-gulp dev
+npm run dev
 ```
