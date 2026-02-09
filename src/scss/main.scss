@@ -4,12 +4,15 @@
 
 
 // Header styling
-header {
+.header {
   // Hero styling
   &.hero {
-    background-image: url('/assets/images/cover.png');
-    background-size: cover;
-    background-position: center;
+    // Cover styling
+    &.is-cover {  
+      background-image: url('/assets/images/cover.png');
+      background-size: cover;
+      background-position: center;
+    }
 
     // Hero content
     .hero-body {
@@ -46,9 +49,36 @@ header {
 }
 
 // Footer styling
-footer {
+.footer {
+  background-color: var(--bulma-primary-95);
   font-size: var(--bulma-size-7);
   text-align: center;
+  padding: 0;
+
+  // Padding for child elements
+  & > * {
+    padding: var(--bulma-footer-padding);
+  }
+
+  // Badges styling
+  .badges {
+    display: grid;
+    grid-auto-columns: 88px;
+    grid-auto-rows: 31px;
+    grid-template-columns: 88px 88px 88px;
+    gap: 4px;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (min-width: 768px) {
+      grid-template-columns: 88px 88px 88px 88px 88px 88px 88px;
+    }
+
+    a {
+      height: 31px;
+      border-bottom: none;
+    }
+  }
 }
 
 // Content styling
@@ -120,10 +150,43 @@ footer {
   }
 }
 
+// Box styling
+.box {
+  box-shadow: none;
+
+  // Transparent box styling
+  &.is-transparent {
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+  }
+}
+
 // Emoji styling
 .emoji {
   height: 1em;
   width: 1em;
   margin: 0 .05em 0 .1em;
   vertical-align: -0.1em;
+}
+
+// Top border modifier
+.has-border-top:before, .has-border:before {
+  content: " ";
+  display: block;
+  width: 100%;
+  height: 24px;
+
+  background-image: url('/assets/images/border-top.png');
+  background-position: center;
+}
+
+// Bottom border modifier
+.has-border-bottom:after, .has-border:after {
+  content: " ";
+  display: block;
+  width: 100%;
+  height: 24px;
+
+  background-image: url('/assets/images/border-bottom.png');
+  background-position: center;
 }
