@@ -1,14 +1,14 @@
 {
-  "name": "danae.link",
+  "name": "@danae/linktree",
   "version": "0.1.0",
   "author": "Danae Dekker <hello@danaedekker.com>",
   "description": "My personal link tree",
   "license": "GPL-3.0-or-later",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/danae/danae.link.git"
+    "url": "git+https://github.com/danae/linktree.git"
   },
-  "homepage": "https://danae.link/",
+  "homepage": "https://danae.dev/",
   "scripts": {
     "build": "gulp build",
     "dev": "gulp dev"
