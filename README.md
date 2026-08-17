@@ -18,8 +18,9 @@ Other versions of the package can be found [here](https://github.com/danae/linkt
 
 ## Local development
 
-Install Node.js and npm, then run the following command to open a development web server with live reload at port 8000:
+Install Node.js and npm, then run the following commandsto install the packages and open a development web server with live reload at port 8000:
 
 ```bash
+npm install
 npm run dev
 ```
