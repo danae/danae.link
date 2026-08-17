@@ -1,4 +1,3 @@
-const brfs = require('brfs');
 const browserify = require('browserify');
 const buffer = require('vinyl-buffer');
 const gulp = require('gulp');
