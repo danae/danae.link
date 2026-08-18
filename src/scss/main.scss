@@ -80,6 +80,10 @@
 
 // Columns styling
 .columns {
+  &:not(:last-child) {
+    margin-bottom: 3rem !important;
+  }
+
   // Column styling
   .column:not(:last-child) {
     @include mx.mobile {
