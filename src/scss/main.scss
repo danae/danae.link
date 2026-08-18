@@ -1,6 +1,7 @@
 // Import the Bulma framework
 @use 'bulma';
-@use 'bulma/sass/utilities/mixins';
+@use 'bulma/sass/utilities/initial-variables' as iv;
+@use 'bulma/sass/utilities/mixins' as mx;
 
 
 // Header styling
@@ -12,14 +13,10 @@
       background-image: url('/assets/images/cover.png');
       background-size: cover;
       background-position: center;
-    }
 
-    // Hero content
-    .hero-body {
-      padding: 0;
-
-      h1 {
-        color: var(--bulma-light);
+      // Hero body styling
+      .hero-body {
+        padding: 0;
       }
     }
   }
@@ -33,7 +30,7 @@
     }
 
     // Mobile header media styling
-    @include mixins.mobile  {
+    @include mx.mobile  {
       flex-direction: column;
 
       .media-left {
@@ -70,13 +67,23 @@
     justify-content: center;
     align-items: center;
 
-    @media screen and (min-width: 768px) {
+    @include mx.tablet {
       grid-template-columns: 88px 88px 88px 88px;
     }
 
     a {
       height: 31px;
       border-bottom: none;
+    }
+  }
+}
+
+// Columns styling
+.columns {
+  // Column styling
+  .column:not(:last-child) {
+    @include mx.mobile {
+      margin-bottom: 3rem !important;
     }
   }
 }
